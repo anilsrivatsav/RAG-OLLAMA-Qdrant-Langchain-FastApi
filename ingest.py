@@ -61,14 +61,14 @@ def process_and_store_documents(documents, collection_name="my_documents", batch
         logging.info(f"Processing completed in {end_time - start_time:.2f} seconds.")
 
 # Process the files from inside data/
-pdf_loader = DirectoryLoader("data/", glob="**/*.pdf", loader_cls=PyPDFLoader)
+pdf_loader = DirectoryLoader("db/", glob="**/*.pdf", loader_cls=PyPDFLoader)
 loaded_documents = pdf_loader.load()
 
 # Split loaded documents into chunks
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=40)
 docs1 = text_splitter.split_documents(loaded_documents)
 
-# Store the document chunks from the data/ directory in the Qdrant vector store
+# Store the document chunks from the db/ directory in the Qdrant vector store
 process_and_store_documents(docs1, collection_name="my_documents")
 
 @app.post("/upload/")

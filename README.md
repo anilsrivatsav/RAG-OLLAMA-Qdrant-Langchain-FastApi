@@ -42,7 +42,7 @@ The service will be available at `http://localhost:8000`.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repository.git
+   git clone https://github.com/anilsrivatsav/RAG-OLLAMA-Qdrant-Langchain-FastApi.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -89,15 +89,20 @@ The service will be available at `http://localhost:8000`.
 
 ## Configuration
 
-The service can be configured using environment variables. Create a `.env` file in the project root directory with the following contents:
+Configuration
+The service can be configured using environment variables. Rename the env.example file to .env and update it with the following contents:
 
-```
+```makefile
 LANGCHAIN_TRACING_V2=true
 LANGCHAIN_ENDPOINT="https://api.smith.langchain.com"
 LANGCHAIN_API_KEY=""
-LANGCHAIN_PROJECT="crisgpt"
+LANGCHAIN_PROJECT="rag"
 OLLAMA_HOST="localhost:11434"
-```
+``` 
+
+# Store the document chunks from the db/ directory in the Qdrant vector store.
+Replace the LANGCHAIN_API_KEY and OLLAMA_HOST values with your actual API key and Ollama host address, respectively.
+
 
 Replace the `LANGCHAIN_API_KEY` and `OLLAMA_HOST` values with your actual API key and Ollama host address, respectively.
 
