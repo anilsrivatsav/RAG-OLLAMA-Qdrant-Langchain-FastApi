@@ -1,0 +1,12 @@
+langchain-community==0.0.29
+langchain==0.1.13
+qdrant-client==1.8.0
+uvicorn==0.23.2
+python-dotenv==0.20.0
+pydantic==1.10.13
+langserve==0.0.30
+
+fastapi
+sse-starlette
+tqdm
+pypdf
