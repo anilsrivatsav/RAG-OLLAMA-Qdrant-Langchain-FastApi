@@ -9,6 +9,7 @@ Before running this service, you need to have the following installed and runnin
 
 - **Ollama:** The ChatOllama model should be installed and running locally. For installation instructions, refer to the [Ollama documentation](https://github.com/langchain/ollama).
 - **Qdrant:** The Qdrant vector database should be hosted on a local server and exposed on port 6333. For installation and setup instructions, refer to the [Qdrant documentation](https://github.com/qdrant/qdrant).
+Store the document chunks from the db/ directory in the Qdrant vector store.
 
 ## Features
 
@@ -99,10 +100,6 @@ LANGCHAIN_API_KEY=""
 LANGCHAIN_PROJECT="rag"
 OLLAMA_HOST="localhost:11434"
 ``` 
-
-# Store the document chunks from the db/ directory in the Qdrant vector store.
-Replace the LANGCHAIN_API_KEY and OLLAMA_HOST values with your actual API key and Ollama host address, respectively.
-
 
 Replace the `LANGCHAIN_API_KEY` and `OLLAMA_HOST` values with your actual API key and Ollama host address, respectively.
 

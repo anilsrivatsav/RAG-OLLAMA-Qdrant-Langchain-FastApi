@@ -9,6 +9,9 @@ path/to/data
 path/to/
 path/
 data/
+data
+.data
+/data/
 # Distribution / packaging
 .Python
 build/
